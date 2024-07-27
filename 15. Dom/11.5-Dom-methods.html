@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>defer vs asyn</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        #head{
+            background-color: rgb(57, 57, 158);
+            color: white;
+        }
+        header{
+            padding: 10px;
+            text-align: center;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1 id="play">Play with Javascript</h1><span>😊😊😊Window key+dot for emojis</span>
+    </header>
+    <div id="head">
+        <h1>this is saravanan from Qspider</h1> <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, itaque. Nulla repellendus temporibus tenetur dolorem eveniet officiis, perspiciatis amet omnis autem laudantium sit minima saepe aliquid nemo eligendi, sequi quam?</p>
+        <br>
+    </div>
+
+    <div>
+        <p class="myclass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quia.</p>
+        <p class="myclass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quia.</p>
+        <p class="myclass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quia.</p>
+    </div> <br><br><br>
+
+    
+    <script>
+        console.log(document.body.children[0].children[1]);
+        //1. getElementById()
+        //2. getElementsByClassName()
+        //3. getElementsByTagName()
+        //4. Finding elements by using CSS Selector
+        //5. querySelector() & querySelectorAll() -- DOM Query Selector
+
+        //1. getElementById();
+        var game = document.getElementById("play");
+        console.log(game.innerText);
+        game.innerText = "Play with Dom Elements";
+        console.log(game.innerText);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function pokemon (name, type) {
+                this.name = name;
+                this.type = type;
+            }
+            var pika = new pokemon('pikachu','electric');
+            console.log(pika);
+    </script>
+
+    
+    <script>
+        //__proto__
+        let x = [1,2];
+        console.log(x);
+
+        //Object() function => Array() function => [1,2];
+        let y = {};
+        console.log(y.forEach);
+
+        function Object(){ };
+        console.log(new Object().forEach);
+
+        var z = [1,2];
+        console.log(z.__proto__);
+        function Object1() {
+
+        }
+        function Array1() {
+
+        }
+        Array1.prototype = new Object1();
+        let arr = new Array1();
+        console.log(arr);
+    </script>
+
+</body>
+</html>

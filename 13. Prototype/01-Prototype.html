@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <script>
+        function Emp(name,company,sal){
+            this.name = name;
+            this.company = company;
+            this.sal = sal;
+        }
+        var e1 = new Emp("tamil",25,20000);
+        var e2 = new Emp("kishore",25,20000);
+        console.log(e1.name);
+        console.log(e1.location);
+        e1.prototype.location = "chennai";
+        console.log(e1.prototype);
+
+        console.log(person1.location);
+        console.log(e1);
+        e1.location = "madras";
+        console.log(e1);
+
+        e1.__proto__.address = "tambaram";
+        console.log(e1.address);
+
+        e1.__proto__.home = "mumbai";
+        console.log(e1.home);
+        console.log(e2.home);
+
+    </script>
+</body>
+</html>

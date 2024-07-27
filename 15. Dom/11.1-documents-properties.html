@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>hi</h1>
+    <div>
+        <p>hi</p>
+        <h2>
+            hello
+        </h2>
+    </div>
+    <script>
+            console.log(innerHeight, innerWidth);
+            window.open('https://amazon.in');
+            window.close();
+            window.print();
+            window.setInterval( function () {
+                window.document.title = "this is title"
+                window.location.href = "https://google.com";
+                window.location.assign("https://google.com");
+            }, 5000)
+            if(location.protocol=="http:")
+            {
+                console.log("unsafe site");
+            }
+
+            //dom methods
+            console.log(document);
+            console.dir(document);
+            console.log(document.URL);
+            console.dir(document.body.childNodes);
+            console.dir(document.body.children[1].children[1].innerText);
+            document.body.children[1].children[1].innerText = "this is h2 tag"; 
+
+            
+    </script>
+</body>
+</html>

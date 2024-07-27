@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+
+         //what are the various way to create an Array?
+        //three ways that is 
+        //1. array literals
+        //2. using new keyword
+        //3. by initializing Array Constructor
+
+        //1.Array Literals
+        var array1 = [1,2,3,4,5];
+        console.log(array1);
+        //2. using new keyword
+        var array2 = new Array();
+        console.log(array2);
+        //3. by initializing with values
+        var array3 = new Array("hi",10);
+        console.log(array3);
+
+        console.log(typeof Array);
+        console.log(typeof typeof Array);
+
+        //Array methods
+        //.length,  indentifier[1]=10, toString(), forin, forof, 
+        //push, pop, unshift, shift, isArray, includes, indexOf, join(",")
+        //reverse, splice, slice
+
+        var array1 = new Array("hi","hello","welcome");
+        console.log(array1);//["hi","hello","welcome"]
+
+        //1. retriving array element -- it follows index number
+        var array2 = new Array(1,2,3,4);
+        console.log(array2[3]);
+
+        //2. updating array element -- it can update array element
+        var array3 = new Array(10,20,30,40);
+        array3[2] = 100;
+        console.log(array3)
+
+        //3. retriving index no of array elements
+        var array4 = [3,2,1,2,2,3];
+        for(var retriv in array4)
+        {
+            console.log(retriv);
+        }
+        //4. display elements which is in array
+        var array5 = [12,23,34,45,56];
+        for(var display of array5)
+        {
+            console.log(display);
+        }
+        //5. length method
+        var array6 = [13,12,15,12,14];
+        var len = array6.length;
+        console.log(len);//5
+
+        //6. toString method
+        var array7 = [9,8,7,6,5,"hi","hello"];
+        var convertToString = array7.toString();
+        console.log(convertToString);//9,8,7,6,5,hi,hello
+
+        //7. push method
+        var array8 = [6,4,3,2,32,2];
+        array8.push(9);
+        console.log(array8);//[6, 4, 3, 2, 32, 2, 9]
+
+        //8. pop method
+        var array9 = [67,56,34,12];
+        array9.pop();
+        console.log(array9);//[67, 56, 34]
+
+        //9. unshift method
+        var array10 = [1,2,3,4];
+        array10.unshift(-1,0)
+        console.log(array10);//[-1, 0, 1, 2, 3, 4]
+
+        //10.shift method
+        var array11 = [9,8,7,6];
+        array11.shift();
+        console.log(array11);//[8, 7, 6]
+
+        //11.isArray method
+        var array12 = [1,2,3];
+        var check = Array.isArray(array12);
+        console.log(check);//true
+
+        //12.includes method
+        var array13 = ["salem","trichy","madurai"];
+        var check1 = array13.includes("salem");
+        var check2 = array13.includes("salem",2);
+        console.log(check1);//true
+        console.log(check2);//false
+
+        //13.indexOf method
+        var array14 = ["a","b","c","d","e","f"];
+        var indexNo = array14.indexOf("e");
+        console.log(indexNo);//4
+
+        //14.reverse method
+        var array15 = [9,8,7,6,5];
+        var rev = array15.reverse();
+        console.log(rev);
+
+        //15.splice method--includes end value also..
+        //it will modify element in original array
+        var array16 = [1,2,3,5,6,7];
+        array16.splice(1,4,100);//[1,100,7]
+        console.log(array16);
+        
+        //16.slice method
+        //it will create a new array and then 
+        //it will modify element in new array
+        var array17 = ["ab","bc","cd","de","ef"];
+        var cutItem = array17.slice(1,3);
+        console.log(cutItem);//["bc","cd"]
+        console.log(array17);//["ab","bc","cd","de","ef"];
+
+        //17.join method-it will join elements in array..
+        var array18 = ["xy","yz","za"];
+        var join1 = array18.join("");
+        var join2 = array18.join(" ");
+        var join3 = array18.join(",");
+        console.log(join1);
+        console.log(join2);
+        console.log(join3);
+
+        //18. forEach method --
+        //The forEach () method executes a provided function once for each array element.
+        var sum = 0;
+        var array19 = [56,67,78,89];
+        array19.forEach(myFunction1);
+        function myFunction1(item){
+            sum = sum + item;
+        }
+        console.log(sum);
+
+        //19. map method - it will take element and index number of element
+        var elements = [345,456,567,678];
+        //Basic..
+        var sum = 0;
+        elements.map(myFunction2);
+        function myFunction2(item,index)
+        {
+            console.log(item,index);
+            sum = sum + item;
+        }
+        console.log(sum);
+
+        //Intermediate..
+        var elements = [345,456,567,678];
+        var sum =0;
+        var mapped = elements.map(function(item,index){
+            item = item+10;
+            return item})
+        console.log("before mapping",elements);
+        console.log("after mapping",mapped);
+
+        //arrow function - with two parameter
+        var num = [1,2,3,4,5,6,7,8,9];
+        var mapps = num.map((item,index) => {
+                return item+20;
+        })
+        console.log(mapps)
+
+        //add # symbol to all element in array
+        var arr2 = [1,2,3,4,5];
+        var newarr = arr2.map((item => '#'+item));
+        console.log(newarr);
+
+        //arrow function - with one parameter
+        var num = [1,2,3,4,5,6,7,8,9];
+        var mappse = num.map(item => {
+                return item+10;
+        })
+        console.log(mappse)
+
+        //makin changes in elements in array
+        var people = [
+            {id:1,fname:"ajith",lname:"kumar"},
+            {id:2,fname:"ram",lname:"kumar"},
+            {id:3,fname:"vijay",lname:"kumar"},
+        ]
+        
+        var map1 = people.map(function(val){
+                // return val.fname+val.lname;
+                var fullName = [val.fname,val.lname].join(" ");
+                var obj = {id:val.id,fullName:fullName};
+                return obj;
+        });
+        console.log(map1);
+
+        //20. filter method - return statement should be true or else false only
+        //using arrow function
+        var oddeven = [21,30,31,40,41];
+        var filtered1 = oddeven.filter(item => {
+            if(item%2==1)
+                return true;
+            else 
+                return false;
+        });
+        console.log(filtered1);
+
+        //using arrow function
+        var oddeven = [21,30,31,40,41];
+        var filtered2 = oddeven.filter(item => {
+            console.log(item);
+        })
+        //find all greatest number of 30
+        var arrays = [10,20,30,40,50,60];
+        var arr = arrays.filter(value => value>30)
+        console.log("greatest number of 30: ",arr);
+
+        //21. sort method-works based on charCodeAT()
+        var array20 = [23,43,5,2,8];
+        var order = array20.sort();
+        console.log(order);
+
+        //22. find method - it will check numbers one by one and return value if condition true
+        var array21 = [12,34,67,54,7];
+        var finder = array21.find(item => {return item>20});//34
+        console.log(finder);
+
+        //23. reduce method - it will take first two value in array 
+        //and then it will give single value only as output
+        var array22 = ["1","2","3","4","5"];
+        var reduced = array22.reduce((acc,value) => acc - value);
+        console.log(reduced);
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

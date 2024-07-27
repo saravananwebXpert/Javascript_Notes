@@ -1,0 +1,30 @@
+/*  */
+
+#grandParent
+{
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    padding: 20px;
+}
+
+#parent
+{
+    border: 2px solid black;
+    height: 80pxpx;
+    width: 160px;
+    padding: 10px;
+    margin: auto;
+}
+
+#child
+{
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    margin: auto;
+}
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Marker(color,brand,price)
+        {
+            this.color = color;
+            this.brand = brand;
+            this.price = price;
+        }
+        var pen1 = new Marker("black","camlin",25);
+        console.log(pen1);
+        console.log(pen1.price);
+        pen1.color = "blue";
+        console.log(pen1.color);
+        pen1.shape = "cylinder";
+        delete pen1.brand;
+        console.log(pen1);
+    </script>
+</body>
+</html>

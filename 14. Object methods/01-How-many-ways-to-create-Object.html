@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        //how many ways to create an object
+        //1. object literals
+        //2. using new Keyword
+        //3. by initializing object
+
+        //1. using object literals
+        var object1 = {
+            name:"saravanan",
+            age:24,
+            class:"javascript",
+            siblings:{
+                sister:"saro",
+                brother: "vanan"
+            }
+        }
+        console.log(object1.name);
+        console.log(object1.siblings.sister);
+
+        //2. using new keyword
+        var object2 = new Object();
+        object2.name = "saravanan";
+        object2.age = 24;
+        object2.city = "chennai";
+        
+        console.log(object2);
+
+        //3. by initializing object
+        function Person(name,age,city){
+            this.name=name;
+            this.age=age;
+            this.city=city;
+        }
+        var student = new Person("karthick",24,"trichy");
+        console.log(student);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object methods</title>
+</head>
+<body>
+    <script>
+        //Object methods
+        //add, delete, replace.
+        // assign, value, keys, seal, freeze, entries
+
+        // add key
+        var obj1 = {
+            name:"saravanan",
+            age:24,
+            fav_subject:"maths"
+        }
+        console.log(obj1);
+        
+        obj1.institute = "Qspiders";
+        console.log(obj1);
+
+        //2. delete key
+        delete obj1.age;
+        console.log(obj1);
+
+        //3. replace key values
+        var obj2 = {name:"vijay",age:54}
+        obj2.age = 51;
+        console.log(obj2);
+
+        //1. assign method - used to merge two object
+        var lamborghini = {
+            speed:190,
+            price:2400000,
+            color:"blue",
+            model:2022
+        }
+        var office  = {
+            location: "USA",
+            distance:"1200km"
+        }
+        Object.assign(lamborghini,office);
+        console.log(lamborghini);
+
+        //2. values method - to see the values only
+        var lamborghini = {
+            speed:190,
+            price:2400000,
+            color:"blue",
+            model:2022
+        }
+
+        var values = Object.values(lamborghini);
+        console.log(values);
+
+        //3. keys method
+        var lamborghini = {
+            speed:190,
+            price:2400000,
+            color:"blue",
+            model:2022
+        }  
+
+        var keys = Object.keys(lamborghini);
+        console.log(keys);
+
+        //4. seal method - it will allow to modify keys 
+        //but it will not allow new key and values
+        var lamborghini = {
+            speed:190,
+            price:2400000,
+            color:"blue",
+            model:2022
+        }
+        Object.seal(lamborghini);
+        lamborghini.speed = 200;
+        lamborghini.city = "USA";
+        console.log(lamborghini);
+
+        //5. freeze method - it will not allow to modify key
+        //and it will not allow new keys
+        var lamborghini = {
+            speed:190,
+            price:2400000,
+            color:"blue",
+            model:2022
+        }
+        Object.freeze(lamborghini);
+        lamborghini.speed = 200;
+        lamborghini.city = "USA";
+        console.log(lamborghini);
+
+        //6. entries method - it will take first key and value
+        //and then it will put that in array seperatly.
+        var lamborghini = {
+            speed:190,
+            price:2400000,
+            color:"blue",
+            model:2022
+        }
+        for(var entry of Object.entries(lamborghini))
+            console.log(entry);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

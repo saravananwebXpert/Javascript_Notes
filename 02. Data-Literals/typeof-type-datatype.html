@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta  content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>typeof datatype</title>
+</head>
+<body>
+        <script>
+                console.log(typeof 15); //number
+                console.log(typeof typeof 15); //string
+
+                console.log(typeof true); //boolean
+                console.log(typeof typeof true); //string
+
+                console.log(typeof "hi"); //string
+                console.log(typeof typeof "hi"); //string
+
+                console.log(typeof null); //object
+                console.log(typeof typeof null); //string
+
+                console.log(typeof undefined); //undefined
+                console.log(typeof typeof undefined); //string
+
+                console.log(typeof 2n); //bigint
+                console.log(typeof typeof 2n);// string
+
+                console.log(typeof Object);//funtion
+                console.log(typeof typeof Object);//string
+
+                console.log(typeof NaN);//number
+                console.log(typeof typeof NaN);//string
+
+                console.log(typeof function() {});//function
+                console.log(typeof typeof function() {});//string
+
+                console.log(typeof {});//object
+                console.log(typeof typeof {});//string
+
+                console.log(typeof []);//object
+                console.log(typeof typeof []);//string
+
+        </script>
+</body>
+</html>

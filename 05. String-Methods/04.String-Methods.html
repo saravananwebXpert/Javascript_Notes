@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+        var name = "javascript";
+        console.log(name.length); //10
+
+        var name = "javascript";
+        console.log(name.slice(4,9));// scrip
+
+        var name = "java script";
+        console.log(name.slice(4,9));//scri
+
+        var name = "javascript";
+        console.log(name.slice(-4,-1));//rip
+
+        var name = "javascript";
+        console.log(name.charAt(4));//s //it follows index number
+
+        var fname = "java";
+        var lname = "script";
+        console.log(fname.concat(lname));//javascript
+
+        var name = "javascript";
+        console.log(name.toUpperCase());//JAVASCRIPT        
+    
+        var name = "JavaScript";
+        console.log(name.toLowerCase());//javascript
+
+        var name = "javascript";
+        console.log(name.repeat(2));//javascriptjavascript
+
+        var name = "javascript is famous language";
+        console.log(name.replace("famous","popular"));//javascript is popular language
+
+        var name = "     javascript is famous language        ";
+        console.log(name.trim())//javascript is famous language
+
+        var name = "javascript is famous language";
+        console.log(name.startsWith("java"))//true
+
+        var name = "javascript is famous language";
+        console.log(name.endsWith("language"))//false
+
+        var name = "javascript is famous language";
+        console.log(name.split(``))//['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', ' ', 'i', 's', ' ', 'f', 'a', 'm', 'o', 'u', 's', ' ', 'l', 'a', 'n', 'g', 'u', 'a', 'g', 'e']
+
+        var name = "javascript is famous language";
+        console.log(name.split(` `))//['javascript', 'is', 'famous', 'language']
+
+        var name = "javascript is famous language";
+        console.log(name.split(`  `))//['javascript is famous language']
+
+        var name = "javascript is famous language";
+        console.log(name.split(`|`))//['javascript is famous language']
+
+        var name = "puneto bangalore";
+        console.log(name.substring(4,10))//to ban
+
+        var name = "puneto bangalore";
+        console.log(name.substr(4,10))//to bangalo
+
+        var name = "puneto bangalore";
+        console.log(name.includes("pune"))//true
+
+        var name = "puneto bangalore";
+        console.log(name.indexOf("to"))//4
+    </script>
+</body>
+</html>

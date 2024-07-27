@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtraction</title>
+</head>
+<body>
+    <script>
+        var e = "30"-20;
+        console.log(e, typeof e); // 10 number
+
+        var e = 30-"20";
+        console.log(e, typeof e); // 10 number
+
+        var e = 10 - "a";
+        console.log(e, typeof e); // NaN number
+
+        var e = "a" - 10;
+        console.log(e, typeof e); // NaN number
+
+        var e = "a" - true;
+        console.log(e, typeof e);//NaN number
+    </script>
+</body>
+</html>

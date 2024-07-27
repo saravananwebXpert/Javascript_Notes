@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Assignment 1:
+        console.log("Assignment-1");
+        var array = [1,2,3,4,5,6];
+        console.log("reversed array= ",array.reverse());
+        console.log(`
+        `);
+        //Assignment 2:
+        console.log("Assignment-2");
+        var array = new Array();
+        var city1 =  "chennai";
+        var city2 =  "trichy";
+        var city3 =  "tambaram";
+        array.push(city1,city2,city3);
+
+        function myFunction(item)
+        {
+            var itemlen = item.length;
+            if(itemlen%2==0)
+                console.log("even-length city names= ",item);
+        }
+        array.forEach(myFunction);
+
+        console.log(`
+        `);
+        //Assignment 3:
+        console.log("Assignment-3");
+
+        var arr = [[[[1,2,3,[["hello"]],4,5,6]]]];  
+        var newarr = new Array();
+        arr.forEach(myNewFunction);
+
+        function myNewFunction(item)
+        {
+            var element = Array.isArray(item);
+            if(element==true)
+                item.forEach(myNewFunction);
+            else
+                newarr.push(item);
+        }
+        console.log(newarr);
+
+        
+
+    </script>
+</body>
+</html>

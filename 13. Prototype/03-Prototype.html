@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        function Students(name,age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        var s1 = new Students("saran",22);
+        var s2 = new Students("tamil",25);
+        console.log(s1);
+
+        // console.log(Students.year);//undefined
+
+        // Student.year = 2021;
+        // console.log(Students.year);//undefined
+
+        //1. prototype
+        Students.prototype.year = 2021;
+        console.log(Students.prototype.year);//2021
+
+        console.log(s1);//year = 2021
+        console.log(s2);//year = 2021
+
+        Students.prototype.year = 2020;
+        console.log(s1);//year = 2020
+        console.log(s2);//year = 2020
+
+        //2. __proto__
+       
+        
+
+    </script>
+</body>
+</html>

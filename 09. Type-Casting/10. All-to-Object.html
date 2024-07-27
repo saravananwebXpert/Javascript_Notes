@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Object</title>
+</head>
+<body>
+        <script>
+                console.log(Object(123));  //Number {123}
+                console.log(Object("123")); //string {'123'}
+                console.log(Object("hi")); //string {'hi'}
+                console.log(Object(false)); //Boolean {false}
+                console.log(Object(true)); //Boolean {true}
+                console.log(Object(undefined));// {}
+                console.log(Object(null));// {}
+                console.log(Object(2n));// Bigint {2n}
+                console.log(Object(Object));// f Object(){}
+        </script>
+</body>
+</html>

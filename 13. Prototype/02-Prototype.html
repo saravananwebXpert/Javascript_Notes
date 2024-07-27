@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Emp(name,company,sal){
+            this.name = name;
+            this.company = company;
+            this.sal = sal;
+        }
+        var emp1 = new Emp("sauvik","wipro",20000);
+        var emp2 = new Emp("sarvanan","TCS",10000);
+        var emp3 = new Emp("karthick","TATA",30000);
+        console.log((emp1));
+
+        console.log(emp1.city);
+        emp1.__proto__.city = "chennai";
+        console.log(emp1);
+        console.log(emp2);
+        console.log(emp3);
+
+    </script>
+</body>
+</html>

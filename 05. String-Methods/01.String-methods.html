@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+  <script>
+// how to create string value?
+        // 1.using single qote
+        var str = 'this is saravanan';
+        console.log(str);
+        
+        // 2.using double qote
+         var str = "this is saravanan";
+         console.log(str);
+
+        // 3.using back ticks
+         var str = `this is saravanan`;
+         console.log(str);
+
+        // 4.using String object, new keyword
+        var str = new String("im saravanan");
+        console.log(str);
+
+        console.log("typeof String: "+typeof String);//function
+        console.log(typeof typeof String);//String
+
+    // String methods
+    var str = "tamil selvan";
+    console.log(str.length); //12
+
+    var str = new String("tamilselvan");
+    console.log(str.charAt(5)); //s it follows index number
+    
+    var fname = "tamil";
+    var lname = "selvan";
+    console.log(fname.concat(' ',lname)); //tamil selvan
+    console.log(`${fname} ${lname}`);
+
+    var fname = "tamil selvan";
+    console.log(fname.includes("an")); //true
+
+    var fname = "tamil selvan";
+    console.log(fname.startsWith("ta")); //true
+
+    var fname = "tamil selvan";
+    console.log(fname.endsWith("an")); //true
+
+    var fname = "tamil selvan";
+    console.log(fname.indexOf("v")); //9 it follows index number
+    
+    var fname = "tamil selvan";
+    console.log(fname.repeat(3));//tamil selvantamil selvan tamilselvan
+
+    var fname = "tamil selvan";
+    console.log(fname.replace("selvan","rocky"));//tamil rocky
+    
+    var fname = "tamilselvan";
+    console.log(fname.slice(2)); //milselvan
+    console.log(fname.slice(2,5)); // mil
+
+    var para = "Im from Chennai";
+    var regex = /[A-Z]/g;
+    var found = para.match(regex);
+    console.log(found)
+
+    var para = "tamil selvan";
+    console.log(para.split('a'));
+    console.log(para.split('a', 1));
+    console.log(para.split('a', 2));
+
+    var para = "chennai city"
+    console.log(para.substring(5)); //ai city it follows index no
+
+    var fname = "tamil";
+    console.log(fname.toUpperCase())
+
+    var lname = "Selvan";
+    console.log(fname.toLowerCase())
+
+    var message = "    i want to go outside!   "
+    console.log(message.trim())
+
+    var message = "    i want to go outside!    "
+    console.log(message)
+    console.log(message.trim)
+    console.log(message.trimStart())
+    console.log(message.trimEnd())
+
+    var number = "1 + 4 + 5";
+    console.log(eval(number));
+
+    var number = "1 + 4 + 5";
+    console.log(eval(number.valueOf()));
+  </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //in javascript, we can create arrays in three ways
+        var array = ["saravanan", "mahesh","naveen"];
+        console.log(array)
+        //array is array literals, we can store elements in array literals
+        var arr = new Array();
+        var arr = new Array(10,20,30);
+        //Array() is a constructor
+        console.log(arr);
+        console.log("typeof array: ",typeof arr);
+
+        var arrays = new Array(10,20,30);
+        console.log(arrays[2]) //30
+        console.log(arrays.length);
+        arrays[1] = 40;
+        console.log(arrays);
+        arrays[3] = 50;
+        console.log(arrays);
+
+        var student = arrays.toString();
+        console.log(student);
+
+        var array = new Array(10,20,30,40);
+        for(var arr in array)
+        {
+            console.log(arr);
+        }
+        for(var arr of array)
+        {
+            console.log(arr);
+        }
+
+        var array = new Array("football", "volleyball", "cricket", "badmiton","swimming");
+        console.log(array.length                 );
+        array.push("racing","driving");
+        console.log(array)
+        console.log(array.length);
+
+        array.pop();
+        console.log(array);
+
+        array.unshift("painting","gaming");
+        console.log(array);
+
+        array.shift();
+        console.log(array);
+
+        var isarray = Array.isArray(array);
+        console.log(isarray);
+
+        var array = new Array("football", "volleyball", "cricket", "badmiton","swimming");
+        var arr = array.includes("football");
+        console.log(arr);
+
+        var arr = array.includes("football",2);
+        console.log(arr);
+
+        var arr = array.indexOf("volleyball");
+        console.log(arr);
+
+        var arr = array.join(" ");
+        console.log(arr);
+
+        var arr = array.join(",");
+        console.log(arr);
+
+        var arr = array.join("..");
+        console.log(arr);
+
+        console.log("reverse:", array.reverse());
+
+        //splice, it is a method of Array constructor
+        //it will modify element of original array
+        var array = new Array("football", "volleyball", "cricket", "badmiton","swimming");
+        console.log(array);
+        var arr = array.splice(1,3,"reading");
+        console.log(arr);
+        console.log(array);
+
+        //slice, it is a method of Array constructor
+        //it will create new array and then it will modify element of new array
+        var array = new Array("football", "volleyball", "cricket", "badmiton","swimming");
+        console.log(array);
+        var arr = array.slice(1,3);
+        console.log(arr);
+        console.log(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

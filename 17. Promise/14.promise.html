@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <script>
+        //homw work
+        //promise.ALl
+        //promise.race
+        //rest parameters
+        //spread parameter
+
+        //promise is having 3 states 1. pending 2. full filled 3. rejected
+        //resolve -- should always be defined as 1st parameter
+        // promise is having instance methods
+        // 1. promise.prototype.then(()=>{})
+        // 2. promise.prototype.catch()
+        // 3. promise.prototype.finally()
+        //finally will be executed irrespective or resolve  or reject state
+
+        let promi = new Promise( (resolve,rejected) => {
+            let a = 1 + 1;
+            if(a==3){
+                resolve("sucess");
+            }
+            else{
+                reject("failed");
+            }
+        });
+        promi.then(message => {console.log(message)}).
+        catch(message => {console.log(message)}).
+        finally(message => {console.log(message)});
+
+    </script>
+</body>
+</html>

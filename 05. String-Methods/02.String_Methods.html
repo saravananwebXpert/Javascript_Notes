@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String_Methods_Revision</title>
+</head>
+<body>
+    <script>
+        //string methods revision
+        var name = "tamil selvan";
+        console.log(name);//tamil selvan
+
+        //string methods name
+        //.length, charAt, concat, includes, 
+        //startsWith, endsWith, indexOf, repeat,
+        //replace, slice, match, spilt,
+        //substring, toUpperCase, toLowerCase, trim
+        //trimStart, trimEnd, eval..,etc
+        
+
+        //1. length method 
+        var name = "tamil selvan";
+        var len = name.length;
+        console.log(len); //12
+
+        //2. charAt method - it follow index number
+        var name = "saravanan"; 
+        var char = name.charAt(3);
+        console.log(char);//a
+
+        //3. concat method
+        var firstname = "tamil";
+        var lastname = "selvan";
+        var fullname1 = firstname.concat(lastname);
+        var fullname2 = firstname.concat(" ",lastname);
+        console.log("no space btw names: "+fullname1);//tamilselvan
+        console.log("space btw names: "+fullname2);//tamil selvan
+
+        //4. includes method
+        var park = "flower park";
+        var check = park.includes("park");
+        console.log(check);//true
+
+        //5. startsWith method
+        var laptop = "asus rog";
+        var start = laptop.startsWith("as");
+        console.log(start);//true
+
+        //6. endsWith method
+        var movie = "jumanji";
+        var ends = movie.endsWith("ji");
+        console.log(ends);//true
+
+        //7. indexOf method - it follow index number
+        var course = "javascript";
+        //if we given present letter, we will index number in result, else we will get -1.
+        var indexNum1 = course.indexOf("i");
+        var indexNum2 = course.indexOf("6");
+        console.log(indexNum1);//7
+        console.log(indexNum2);//-1
+
+        //8. repeat method
+        var star = "rajini";
+        var multiple = star.repeat(3);
+        console.log(multiple);//rajinirajinirajini
+
+        //9. replace method
+        var actor = "sharukh khan";
+        var change = actor.replace("sharukh","salman");
+        console.log(change);//salman khan
+
+        //10. toUpperCase method
+        var country = "indian";
+        var allcaps = country.toUpperCase();
+        console.log(allcaps);//INDIAN
+
+        //11. toLowerCase method
+        var heroini = "VaNDhaNa";
+        var allsmall = heroini.toLowerCase();
+        console.log(allsmall);//vandhana
+
+        //12. trim method, trimStart method, trimeEnd method
+        var welcome = "     welcome     ";
+        var greeting = "    comein      ";
+        var shout = "get out of this class                   ";
+        
+        var trimAll = welcome.trim();
+        var TrimFirst = greeting.trimStart();
+        
+
+        var TrimLast = shout.trimEnd();
+
+        console.log(trimAll);//welcome
+        console.log(TrimFirst);//comein
+        console.log(TrimLast);//get out of this class
+
+        //13.split method
+        var slogan = "saravanan";
+        var seperate1 = slogan.split(" ");// ['saravanan']
+        var seperate2 = slogan.split('');//['s', 'a', 'r', 'a', 'v', 'a', 'n', 'a', 'n']
+        var seperate3 = slogan.split("a");//['s', 'r', 'v', 'n', 'n']
+        var seperate4 = slogan.split("a",3);//['s', 'r', 'v']
+        var seperate5 = slogan.split("n",3);//['sarava', 'a', '']
+        console.log(seperate1);
+        console.log(seperate2);
+        console.log(seperate3);
+        console.log(seperate4);
+        console.log(seperate5);
+
+        //14. slice method --it follow index number
+        //.slice(start,end)
+        var app = "Zomato"; 
+        var cut1 = app.slice(2); //2++
+        var cut2 = app.slice(2,5);//2++ to 5-1
+        var cut3 = app.slice(-3); //-2++
+        var cut4 = app.slice(-4,-1); //-4 to -2
+        
+        console.log(cut1);//mato
+        console.log(cut2);//mat
+        console.log(cut3);//ato
+        console.log(cut4);//mat
+
+        //15 substring method --it follows index numbers
+        var building = "apartment is very old";
+        var divide1 = building.substring(5);//5++
+        var divide2 = building.substring(5,9);//5++ to 9-1 
+        var divide3 = building.substring(8,-9);//-9 ot 8-1 
+        console.log(divide1);//ment is very old
+        console.log(divide2);//ment
+        console.log(divide3);//apartmen
+
+        //16 substr method --it follows index numbers
+        var building = "apartment is very old";
+        var divide1 = building.substr(5);//5++
+        var divide2 = building.substr(5,9);//5++ to 9-1 
+        console.log(divide1);//ment is very old
+        console.log(divide2);//ment
+
+        //17. match method
+        var statement = "Chennai is Very Cool in Night";
+        var find = statement.match(/[A-Z]/g);
+        console.log(find);//['C','V', 'C', 'N']
+
+        //18.valueOf method
+        var nums = "18 / 9 * 3";
+        var calculation1 = eval(nums);
+        var calculation2 = eval(nums.valueOf());
+        console.log(calculation1);//6
+        console.log(calculation2);//6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

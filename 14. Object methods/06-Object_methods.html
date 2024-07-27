@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object literals
+        var person = {
+            name : "tamil",
+            age : 28,
+            color : "black"
+        }
+        console.log(person);
+
+        person.class = "html";
+        person.city = "chennai";
+        person.class = "java";
+        delete person.city;
+        console.log(person);
+
+        //using function
+        function Person(name,age,color)
+        {
+            this.name = name;
+            this.age = age;
+            this.color = "black";
+        }
+        var student = new Person("tamil",25,"black");
+        console.log(student);
+
+        
+        //merge two object
+
+        var obj = {name:"saravanan", age:25}
+        var source = {city:"chennai"}
+        Object.assign(obj,source);
+        console.log(obj);
+        console.log(Object.values(obj));
+        console.log(Object.keys(obj));
+
+        const obj = {name:"saravanan", age:25};
+        console.log(Object.seal(obj));
+        console.log(obj.salary = "2000");
+        console.log(obj);
+        console.log(Object.entries(obj));
+    </script>
+</body>
+</html>

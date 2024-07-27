@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Assignment 1: Reverse the array
+        console.log("Assignment-1");
+        var array = [1,2,3,4,5,6];
+        console.log("reversed array= ",array.reverse());
+        console.log(`
+        `);
+
+        //Assignment 2: get 3 city name from prompt,
+        // and display city names in console if the length of city name is  even 
+        console.log("Assignment-2");
+        var array = new Array();
+        var city1 =  "chennai"; //prompt("enter first city name");
+        var city2 =  "trichy"; //prompt("enter second city name");
+        var city3 =  "tambaram"; //prompt("enter third city name");
+        array.push(city1,city2,city3);
+
+        function myFunction(item)
+        {
+            var itemlen = item.length;
+            if(itemlen%2==0)
+                console.log("even-length city names= ",item);
+        }
+        array.forEach(myFunction);
+
+        console.log(`
+        `);
+        //Assignment 3: moving multiple array  elements to single array
+        console.log("Assignment-3");
+
+        var arr = [[[[1,2,3,[["hello"]],4,5,6]]]];  
+        var newarr = new Array();
+        arr.forEach(myNewFunction);
+
+        function myNewFunction(item)
+        {
+            var element = Array.isArray(item);
+            if(element==true)
+                item.forEach(myNewFunction);
+            else
+                newarr.push(item);
+        }
+        console.log(newarr);//[1,2,3,"hello",4,5,6]
+
+        //Assignment 4: freeze method - it will not allow to modify key and it will not allow new keys
+        var lamborghini = {
+            speed:190,
+            price:2400000,
+            color:"blue",
+            model:2022
+        }
+        Object.freeze(lamborghini);
+        lamborghini.speed = 200;
+        lamborghini.city = "USA";
+        console.log(lamborghini);
+
+        
+    </script>
+</body>
+</html>

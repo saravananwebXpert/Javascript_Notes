@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //entries - entries will convert each properties to sperate array
+        console.log("----------------")
+        var obj = {
+            name : "saravanan",
+            age : 25,
+            color : "black"
+        };
+        var container = Object.entries(obj);
+        for (var it of container) {
+            console.log(it);
+        }
+
+        //freeze - freeze method will not allow new properties or change the properties of obj..
+        var obj = {
+            name : "saravanan",
+            age : 25,
+            color : "black"
+        };
+        console.log(obj);
+
+        obj.course = "html";
+        console.log(obj);
+        Object.freeze(obj);
+        obj.city = "chennai";
+        obj.age = 22;
+        console.log(obj);
+        
+        console.log(typeof obj);
+        console.log(typeof typeof obj);
+    </script>
+</body>
+</html>

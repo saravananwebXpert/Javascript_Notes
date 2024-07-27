@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <script>
+        //type of functions
+        //1. function declaration or statement
+        //2. function expression
+        //3. anonymous function
+        //4. nested function
+        //5. immediate invoke function
+        //6. functional programming
+        //7. arrow function
+        //8. recursive function
+        //9. map function
+
+        //1. function declaration or statement----------------------------------------------------------------------------------
+        function sum(a,b)
+        {
+            console.log(a+b);//10
+        }
+        sum(5,5);
+        //using return
+        function add(a,b)
+        {
+            return a+b;
+        }
+       add(5,2);
+
+        //2. function expression----------------------------------------------------------------------------------
+        var product = function mul(a,b)
+        {
+            console.log(a*b);
+        }
+        product(10,20);
+        //using return
+        var product = function mul(a,b)
+        {
+            return a*b;
+        }
+        console.log(product(10,20));
+
+
+        //3. anonymous function----------------------------------------------------------------------------------
+        var anon = function (a,b)
+        {
+            console.log(a/b);
+        }
+        anon(10,5);
+
+        //using return
+        var anon = function (a,b)
+        {
+            return a/b;
+        }
+        console.log(anon(10,5));
+
+
+
+        //4. nested function----------------------------------------------------------------------------------
+        var x = 10;
+        var calc = function sub(a,b)
+        {
+            console.log(a-b);
+            function div()
+            {
+                console.log("hi");
+                function mul(a,b)
+                {
+                    console.log(this.x);
+                    this.x = a/b;
+                }
+                return mul;
+            }
+            return div;
+        }
+        calc(20,4)()(400,20);
+        console.log(x);
+
+
+        //5. immediate invoke function----------------------------------------------------------------------------------
+        (function findrem(a,b)
+        {
+            console.log("reminder= "+a%b);
+        })
+        (20,3);
+
+
+        //6. functional programming----------------------------------------------------------------------------------
+        function math(task,a,b,)
+        {
+            return task(a,b);
+        }
+        function add(a,b)
+        {
+            console.log(a+b);
+        }
+        function sub(a,b)
+        {
+            console.log(a-b);
+        }
+        function mul(a,b)
+        {
+            console.log(a*b);
+        }
+        function div(a,b)
+        {
+            console.log(a/b);
+        }
+        math(add,100,20);
+        math(sub,100,20);
+        math(mul,100,20);
+        math(div,100,20);
+        
+        
+        //7. recursive function----------------------------------------------------------------------------------
+        var oldarr = [[[[1,2,3,[["hello"]],4,5,6]]]];
+        var newarr = new Array();
+        oldarr.forEach(myFunction);
+        function myFunction(item)
+        {
+            var element = Array.isArray(item);
+            if(element==true)
+                item.forEach(myFunction);
+            else
+                newarr.push(item);
+        }
+        console.log(newarr);
+
+
+        //8. arrow function----------------------------------------------------------------------------------
+        var arrow1 = (a,b) => a+b;
+        console.log(arrow1(1,2));
+
+        var arrow2 = () => "hi";
+        console.log(arrow2())
+
+        var arrow3 = () => {return "hello"};
+        console.log(arrow3())
+
+        var arrow4 = val => "welcome"
+        console.log(arrow4());
+
+        //using return
+        var arrow5 = (a,b) => {return a*b};
+        console.log(arrow5(5,2));
+
+        var arrow6 = (value) => "hi "+ value;
+        console.log(arrow6("welcome"));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create String</title>
+</head>
+<body>
+    <script>
+        let str = "tamil";
+        console.log(str);
+        var str1 = new String("tamil");
+        console.log(str1);
+
+        var name = "tamil";
+        console.log(name.length);
+
+        var name = "javascript";
+        console.log(name.slice(3,5));
+
+        var name = "java script";
+        console.log(name.slice(3,5));
+        //slice can accept negative value
+
+        var name = "javascript";
+        console.log(name.slice(-6,-1));
+
+        var name = "saravanan";
+        document.write(name.slice(4,7)); 
+
+        var name = "SaraVanan";
+        console.log(name.toLowerCase()); 
+
+        var name = "saravanan";
+        console.log(name.toUpperCase()); 
+
+        var fname = "tamil";
+        var lname = "selvan"
+        console.log(fname.concat(lname));
+
+        var name = "javascript";//0 1 2 3 4 5 6 
+        console.log(name.charAt(5)); //if follows index number
+
+        var name = "javascript n";
+        console.log(name.repeat(3));
+
+        var name = "pune to bangalore";
+        console.log(name.replace("bangalore", "greenvalley"));
+
+        var name = "      pune to bangalore       ";
+        console.log(name.trim());
+
+        var name = "pune to bangalore";
+        console.log(name.startsWith("pune")); //return type of result is boolean
+
+        var name = "pune to bangalore";
+        console.log(name.endsWith("bangalore")); //return type of result is boolean
+
+        var name = "pune to bangalore";
+        console.log(name.split(``))
+
+        var name = "pune to bangalore";
+        console.log(name.split(` `));
+
+        var name = "pune to bangalore";
+        console.log(name.split(`  `));
+
+        var name = "pune to bangalore";
+        console.log(name.split(``,3));
+
+        var name = "pune to bangalore";
+        console.log(name.split(`|`));
+
+        var name = "pune to bangalore";
+        console.log(name.split(``));
+
+        var name = "pune to bangalore";
+        console.log(name.substring(1,5));
+
+        var name = "pune to bangalore";
+        console.log(name.substr(1,5));
+
+        var name = "pune to bangalore";
+        console.log(name.indexOf("to"));//it follow index number
+
+        var name = "pune to bangalore";
+        console.log(name.includes("to")); //return type of result is boolean
+    </script>
+</body>
+</html>

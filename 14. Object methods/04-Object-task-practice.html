@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-task</title>
+</head>
+<body>
+    <script>
+        
+        function Marker(color,brand,price)
+        {
+            this.color = color;
+            this.brand = brand;
+            this.price = price;
+        }
+        var marker1 = new Marker("black","camlin",25);
+        console.log(marker1);
+        console.log(marker1.price);
+        marker1.color = "blue";
+        console.log(marker1.color);
+        marker1.shape = "cylinder";
+        console.log(marker1.shape);
+        delete marker1.brand;
+        console.log(marker1);
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom methods</title>
+    <script>
+        //DOMContentLoaded will work after all html page fully loaded.. but it will wont check css loaded or not
+        // document.addEventListener('DOMContentLoaded',() => {
+        //     var division = document.getElementById('title');
+        //     console.dir(division)
+        //     var heading = division.children[0];
+        //     heading.innerHTML = "hi! i am learning DOM";
+        //     var image = division.children[3];
+        //     console.dir(image)
+        // });
+
+        //follow this one - it will work after everything(html+css) loaded
+        // window.addEventListener('load',() => {
+        //     var division = document.getElementById('title');
+        //     console.dir(division)
+        //     var heading = division.children[0];
+        //     heading.innerHTML = "hi! i am learning DOM";
+        //     var image = division.children[3];
+        //     console.dir(image.offsetHeight);
+        //     console.dir(image.offsetWidth);
+        // });
+
+        //or else follow this one 
+        window.onload = function () {
+            var division = document.getElementById('title');
+            console.dir(division)
+            var heading = division.children[0];
+            heading.innerHTML = "hi! i am learning DOM";
+            var image = division.children[3];
+            console.dir(image.offsetHeight);
+            console.dir(image.offsetWidth);
+        }
+
+        window.onunload = function(){
+            alert("you are about to be unloaded ")
+        }
+
+        window.onbeforeunload = function(){
+            alert("you are about to be unloaded before")
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div id="title">
+        <h1>
+            hi! i am learning javascript
+        </h1> <br><br>
+        <img src="./vadivel.gif" alt="">
+    </div>
+    
+    
+</body>
+</html>
